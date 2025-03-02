@@ -49,8 +49,40 @@ Click the link to review expectation and variance of theta(variance).
   -[Explanation](Exercises/Experiment6_acf_semivariogram.pdf)
   
   -[Python code](Exercises/Experiment6_acf_semivarogram.ipynb)
+
+## 03-01-2025
   
-  
+
+<100*8 data after sorting each data by longitude and latitude>  
+
+params= [20, 8.25, 5.25, 0.2, 0.5, 5]
+Full likelihood: 2172.70
+Vecchia Maxmin: 2264
+Vecchia Column: 1928
+
+params= [60, 8.25, 5.25, 0.2, 0.5, 5]
+Full likelihood: 2217         +35 
+Vecchia Maxmin: 2273          +9
+Vecchia Column: 1729          -199
+
+<200*8 data after sorting each data by longitude and latitude>
+
+
+params= [20, 8.25, 5.25, 0.2, 0.5, 5]
+Full likelihood: 4174.860696545362                    21 seconds
+Vecchia Maxmin: 4336.260475230565                     1 seconds
+Vecchia Column: 3330. 329727                          0.1 seconds
+ 
+params= [60, 8.25, 5.25, 0.2, 0.5, 5]
+Full likelihood: 4297          +123         21 seconds
+Vecchia Maxmin: 4439  	       +103         1
+Vecchia Column: 3151	       -149 	    0.1
+
+
+Other observations:
+If I don't sort data by longitude and latitude, vecchia column is a lot worse. 
+Conditioning on east is better than conditioning on west.
+Clearly, conditioning on longitude column is better than using latitude slices. 
   
 
 
